@@ -25,7 +25,7 @@ CONFIG_SCHEMA = cv.Schema(
     {
         cv.GenerateID(lora.CONF_LORA_ID): cv.use_id(lora.LoraComponent),
         cv.Optional(CONF_RSSI): sensor.sensor_schema(
-            UNIT_DECIBEL, ICON_SIGNAL, 2, DEVICE_CLASS_SIGNAL_STRENGTH
+            unit_of_measurement=UNIT_DECIBEL, icon=ICON_SIGNAL, accuracy_decimals=2, device_class=DEVICE_CLASS_SIGNAL_STRENGTH
         )
         .extend(
             {
