@@ -122,7 +122,6 @@ TEXT_SENSOR_SCHEMA = cv.ENTITY_BASE_SCHEMA.extend(cv.MQTT_COMPONENT_SCHEMA).exte
         cv.OnlyWith(lora.CONF_SEND_TO_LORA, "lora", default=False): cv.boolean,
         cv.OnlyWith(lora.CONF_RECEIVE_FROM_LORA, "lora", default=False): cv.boolean,
         cv.OnlyWith(lora.CONF_LORA_NAME, "lora", default=""): cv.valid_name,
-        cv.Optional(CONF_ICON): icon,
         cv.Optional(CONF_ON_VALUE): automation.validate_automation(
             {
                 cv.GenerateID(CONF_TRIGGER_ID): cv.declare_id(TextSensorStateTrigger),
